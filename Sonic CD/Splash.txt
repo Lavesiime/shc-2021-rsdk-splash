@@ -1,0 +1,526 @@
+// If you have a custom title screen, this function is all that needs to be changed
+// This function is called after the splash is over to decide what to do next, by default it'll proceed with 
+function Splash_NextPhase
+	Object.Type=TypeName[Sonic]
+	Object.State = 0
+	Object.Value0 = 0
+	Object.Value1 = 0
+	Object.Frame = 0
+endfunction
+
+// Everything hereon is the splash code, you shouldn't need to change this
+
+function Splash_ProgressFrame
+	switch Object.Frame
+	case 0
+		Object.Value1++
+		if Object.Value1 == 64
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 6
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 8
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 10
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 12
+		Object.Value1++
+		if Object.Value1 == 4
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 13
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 15
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 16
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 17
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 18
+		Object.Value1++
+		if Object.Value1 == 4
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 19
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 20
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 21
+		Object.Value1++
+		if Object.Value1 == 4
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 22
+		Object.Value1++
+		if Object.Value1 == 64
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 23
+		Object.Value1++
+		if Object.Value1 == 4
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 24
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 25
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 26
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 27
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 28
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 29
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 30
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 31
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 32
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 33
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 34
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 35
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 36
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 37
+		Object.Value1++
+		if Object.Value1 == 64
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 38
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 39
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 40
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 41
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 42
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 43
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 44
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 45
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 46
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 47
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 48
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 49
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 50
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 51
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 52
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 53
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 54
+		Object.Value1++
+		if Object.Value1 == 2
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	case 55
+		Object.Value1++
+		if Object.Value1 == 360
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+	default
+		Object.Frame++
+		break
+	endswitch
+endfunction
+
+sub ObjectMain
+	switch Object.State
+	case 0
+		// Initialization phase
+		Object.Value0 = 320
+		SetScreenFade(0, 0, 0, Object.Value0)
+		Object.State++
+		break
+	case 1
+		// Fade-in phase
+		if Object.Value0 > 0
+			Object.Value0 -= 8
+		else
+			Object.State++
+		end if
+		SetScreenFade(0, 0, 0, Object.Value0)
+		break
+	case 2
+		// Main phase
+
+		CallFunction(Splash_ProgressFrame)
+
+		// Play the jingle when the logo starts to flash
+		if Object.Frame == 1
+			if Object.Value0 == 0
+				PlayMusic(10)
+			end if
+		end if
+
+		// Fade out when on the last frame
+		if Object.Frame == 55
+			Object.Value0 = 0
+			Object.State++
+		end if
+		break
+	case 3
+		// Fade-out phase
+		if Object.Value0 < 256
+			Object.Value0 += 8
+			SetScreenFade(0, 0, 0, Object.Value0)
+		else
+			CallFunction(Splash_NextPhase)
+			SetScreenFade(0, 0, 0, 255)
+		end if
+		break
+	endswitch
+endsub
+
+sub ObjectDraw
+	DrawSpriteScreenXY(Object.Frame, 212, 120)
+endsub
+
+sub ObjectStartup
+	LoadSpriteSheet("Title/Splash.gif")
+
+	// Frame 0
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 1
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 2
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 3
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 4
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 5
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 6
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 7
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 8
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 9
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 10
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 11
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 12
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 13
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 14
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 15
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 16
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 17
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 18
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 19
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 20
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 21
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 22
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 23
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 24
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 25
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 26
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 27
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 28
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 29
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 30
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 31
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 32
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 33
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 34
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 35
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 36
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 37
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 38
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 39
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 40
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 41
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 42
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 43
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 44
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 45
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 46
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 47
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 48
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 49
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 50
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 51
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 52
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+	// Frame 53
+	SpriteFrame(-160, -112, 320, 224, 0, 0)
+	// Frame 54
+	SpriteFrame(-160, -112, 320, 224, 0, 224)
+	// Frame 55
+	SpriteFrame(-160, -112, 320, 224, 0, 448)
+
+	LoadPalette("Splash.act", 0, 50, 50, 61)
+
+	SetMusicTrack("Splash.ogg", 10, 0)
+endsub
+
+sub RSDK
+	LoadSpriteSheet("Global/Display.gif")
+	SetEditorIcon(Icon0,SingleIcon,-16,-16,32,32,1,143)
+endsub
