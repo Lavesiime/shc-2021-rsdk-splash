@@ -7,10 +7,6 @@
 
 //-------Aliases-------//
 private alias 1 : TYPE_SEGA
-public alias 256 : GROUP_PLAYERS
-public alias 65536 : HITBOX_AUTO
-public alias arrayPos6 : currentPlayer
-public alias arrayPos7 : playerCount
 
 // Function declarations
 reserve function Sega_Function0

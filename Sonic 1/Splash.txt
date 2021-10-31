@@ -6,6 +6,14 @@ end function
 
 // Everything hereon is the splash code, you shouldn't need to change this
 
+private alias 0 : STATE_INIT
+private alias 1 : STATE_FADEIN
+private alias 2 : STATE_MAIN
+private alias 3 : STATE_FADEOUT
+
+private alias object.value0 : object.fadeValue
+private alias object.value1 : object.timer
+
 // Array of every frame and what sprite to use
 private table Splash_SpriteTable
 	2, 1, 0, 1, 2, 1, 0, 2, 0, 1, 2, 0, 2, 1, 0, 1, 0, 1, 2, 1, 0, 2, 0, 2, 1, 0, 2, 0, 1, 2, 0, 2, 0, 2, 1, 0, 1, 0, 2, 0, 1, 2, 0, 2, 1, 0, 1, 2, 1, 2, 1, 0, 2, 0, 1, 2
@@ -17,71 +25,91 @@ private table Splash_frameDelay
 end table
 
 event ObjectMain
+
 	switch object.state
-	case 0
-		// Initialization phase
-		object.value0 = 320
-		SetScreenFade(0, 0, 0, object.value0)
+	case STATE_INIT
+		object.fadeValue = 320
+		SetScreenFade(0, 0, 0, object.fadeValue)
 		object.state++
 		break
-	case 1
-		// Fade-in phase
-		if object.value0 > 0
-			object.value0 -= 8
+
+	case STATE_FADEIN
+		if object.fadeValue > 0
+			object.fadeValue -= 8
 		else
 			object.state++
 		end if
-		SetScreenFade(0, 0, 0, object.value0)
+
+		SetScreenFade(0, 0, 0, object.fadeValue)
 		break
-	case 2
-		// Main phase
+
+	case STATE_MAIN
 
 		// Move to next frame in accordance with the table
+
 		GetTableValue(temp0, object.frame, Splash_frameDelay)
-		object.value1++
-		if object.value1 == temp0
-			object.frame += 1
-			object.value1 = 0
+
+		object.timer++
+
+		if object.timer == temp0
+			object.frame++
+			object.timer = 0
 		end if
 
 		// Play the jingle when the logo starts to flash
 		if object.frame == 1
-			if object.value0 == 0
+			if object.fadeValue == 0
 				PlayMusic(10)
 			end if
 		end if
 
 		// Fade out when on the last frame
 		if object.frame == 55
-			object.value0 = 0
+			object.fadeValue = 0
 			object.state++
 		end if
 		break
-	case 3
+
+	case STATE_FADEOUT
 		// Fade-out phase
-		if object.value0 < 256
-			object.value0 += 8
-			SetScreenFade(0, 0, 0, object.value0)
+		if object.fadeValue < 256
+			object.fadeValue += 8
+			SetScreenFade(0, 0, 0, object.fadeValue)
 		else
 			Callfunction(Splash_NextPhase)
 			SetScreenFade(0, 0, 0, 255)
 		end if
 		break
+
 	end switch
+
 end event
 
 event ObjectDraw
+
+	// Get the sprite to draw based on the current frame
 	GetTableValue(temp0, object.frame, Splash_SpriteTable)
+
+	// Draw the sprite at the screen's center
 	DrawSpriteScreenXY(temp0, screen.xcenter, screen.ycenter)
+
 end event
 
 event ObjectStartup
+
 	LoadSpriteSheet("Title/Splash.gif")
+
+	// Splash frames
 	SpriteFrame(-160, -112, 320, 224, 0, 0)
 	SpriteFrame(-160, -112, 320, 224, 0, 224)
 	SpriteFrame(-160, -112, 320, 224, 0, 448)
+
+	// Load the palette
 	LoadPalette("Splash.act", 0, 50, 50, 61)
+
+	// Set the splash jingle as a music track
 	SetMusicTrack("Splash.ogg", 10, 0)
+
 end event
 
 

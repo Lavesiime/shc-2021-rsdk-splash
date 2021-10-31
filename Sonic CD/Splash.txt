@@ -1,213 +1,25 @@
 // If you have a custom title screen, this function is all that needs to be changed
-// This function is called after the splash is over to decide what to do next, by default it'll proceed with 
+// This function is called after the splash is over to decide what to do next, by default it'll proceed with...
 function Splash_NextPhase
+
 	Object.Type=TypeName[Sonic]
+
 	Object.State = 0
 	Object.Value0 = 0
 	Object.Value1 = 0
 	Object.Frame = 0
+
 endfunction
 
 // Everything hereon is the splash code, you shouldn't need to change this
 
 function Splash_ProgressFrame
+
+	// Lots of fallthrough
+
 	switch Object.Frame
 	case 0
-		Object.Value1++
-		if Object.Value1 == 64
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 6
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 8
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 10
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 12
-		Object.Value1++
-		if Object.Value1 == 4
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 13
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 15
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 16
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 17
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 18
-		Object.Value1++
-		if Object.Value1 == 4
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 19
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 20
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 21
-		Object.Value1++
-		if Object.Value1 == 4
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 22
-		Object.Value1++
-		if Object.Value1 == 64
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 23
-		Object.Value1++
-		if Object.Value1 == 4
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 24
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 25
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 26
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 27
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 28
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 29
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 30
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 31
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 32
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 33
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 34
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 35
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 36
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 37
 		Object.Value1++
 		if Object.Value1 == 64
@@ -215,118 +27,30 @@ function Splash_ProgressFrame
 			Object.Value1 = 0
 		end if
 		break
+
+	case 6
+	case 8
+	case 15
+	case 17
+	case 24
+	case 26
+	case 28
+	case 29
+	case 31
+	case 33
+	case 34
+	case 36
 	case 38
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 39
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 40
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 41
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 42
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 43
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 44
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 45
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 46
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 47
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 48
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 49
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 50
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 51
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 52
-		Object.Value1++
-		if Object.Value1 == 2
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
-	case 53
-		Object.Value1++
-		if Object.Value1 == 3
-			Object.Frame++
-			Object.Value1 = 0
-		end if
-		break
 	case 54
 		Object.Value1++
 		if Object.Value1 == 2
@@ -334,6 +58,40 @@ function Splash_ProgressFrame
 			Object.Value1 = 0
 		end if
 		break
+
+	case 10
+	case 13
+	case 16
+	case 19
+	case 20
+	case 25
+	case 27
+	case 30
+	case 32
+	case 35
+	case 39
+	case 42
+	case 45
+	case 51
+	case 53
+		Object.Value1++
+		if Object.Value1 == 3
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+
+	case 12
+	case 18
+	case 21
+	case 23
+		Object.Value1++
+		if Object.Value1 == 4
+			Object.Frame++
+			Object.Value1 = 0
+		end if
+		break
+
 	case 55
 		Object.Value1++
 		if Object.Value1 == 360
@@ -341,13 +99,17 @@ function Splash_ProgressFrame
 			Object.Value1 = 0
 		end if
 		break
+
 	default
 		Object.Frame++
 		break
+
 	endswitch
+
 endfunction
 
 sub ObjectMain
+
 	switch Object.State
 	case 0
 		// Initialization phase
